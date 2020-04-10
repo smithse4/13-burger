@@ -1,0 +1,54 @@
+<nav class="navbar">
+  <a class="navbar-brand">Eat-Da-Burger!</a>
+</nav>
+
+<div class="container">
+  <img src="./assets/img/floating-burger.jpg" alt="burger" id="burgerimg">
+
+  <div class="card">
+    <h5 class="card-header">Requested burger</h5>
+    <div class="card-body">
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">Burger devoured</h5>
+    <div class="card-body">
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h4>Add a burger</h4>
+    <form class="create-form">
+
+      <div class="form-group">
+        <label for="burger-input">Burger Name:</label>
+        <input type="text" id="burger-input" name="burger_name">
+      </div>
+
+      <div class="form-group">
+        <label for="devoured">Is this burger devoured or a request?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured<br>
+        <input type="radio" name="devoured" value="0"> Request
+      </div>
+
+      <button type="submit">Submit</button>
+      <p>Enter a burger you'd like to eat and click submit</p>
+    </form>
+  </div>
+
+</div>
