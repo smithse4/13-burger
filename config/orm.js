@@ -52,14 +52,13 @@ var orm = {
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
-    queryString = queryString + " (";
+    queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
@@ -70,6 +69,7 @@ var orm = {
       cb(result);
     });
   },
+  
   // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;

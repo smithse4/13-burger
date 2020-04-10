@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #ffa700;
+}
+
+.navbar-brand {
+    font-weight: bold;
+
+}
+
+.container { 
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 20px;
+  }
+
+#burgerimg {
+    float: right;
+}
+
+button {
+    background-color: #ffa700;
+    border: none;
+    margin: 5px;
+}
+
+.card-header {
+    background-color: #4C7031;
+    color: white;
+}
