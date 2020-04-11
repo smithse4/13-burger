@@ -20,7 +20,7 @@ Screenshot of deployed site:
 ### Links
 
 * [Github Repo](https://github.com/smithse4/13-burger)
-* [Deployed Heroku App]()
+* [Deployed Heroku App](https://fierce-fortress-25431.herokuapp.com/)
 
 ## Instructions
 
