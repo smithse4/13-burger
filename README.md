@@ -23,6 +23,14 @@ Screenshot of deployed site:
 
 * My app stores every burger in a database, whether devoured or not.
 
+## Installing
+
+To run the app locally, you will first need to git clone the repository to your local machine.
+
+* Cd into repository
+* Install dependencies by running 'npm install'
+* Start app by running 'node server.js'
+
 #### Directory structure
 
 ```
